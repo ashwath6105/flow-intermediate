@@ -4,14 +4,10 @@ Token contract "DYNAMO". includes all the related transaction, scripts and contr
 
 ## Description
 
-Flow playground link:
+Flow playground link: "https://play.flow.com/1ad5f52e-9a69-4ed2-b819-4b2f1d60239f?type=contract&id=3618cc9c-2e4c-4b40-8ceb-6d73b926d3fd"
 
-```
-https://play.flow.com/1ad5f52e-9a69-4ed2-b819-4b2f1d60239f?type=contract&id=3618cc9c-2e4c-4b40-8ceb-6d73b926d3fd
 
-```
-
-### FlowContract.cdc
+"FlowContract.cdc" :-
 
 The FlowContract.cdc contract contains the basic functionalitites like deposit, mint, transfer etc. It defines a resource Minter that contains a function mintTokens used for minting fungible tokens on the Flow blockchain. The function requires an amount of type UFix64 as a parameter and is restricted to be called only by the contract owner (the owner's address must match the FlowToken account address). Upon successful execution, it increases the total token supply, emits a TokensMinted event with the minted amount, and creates a new vault with the minted tokens, returning the vault to the caller.
 
