@@ -1,6 +1,6 @@
-# Identity, Time, and Transaction Structure(Flow Intermediate Module) 
+# Flow Intermediate Module 
 
-DYNAMO token contract and all the rekated transactions and scripts are included in the folders.
+Token contract "DYNAMO". includes all the related transaction, scripts and contracts are included in the folders.
 
 ## Description
 
