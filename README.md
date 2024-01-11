@@ -1,6 +1,8 @@
-# Flow Intermediate - Identity, Time, and Transaction Structure
+# Identity, Time, and Transaction Structure(Flow Intermediate Module) 
 
 DYNAMO token contract and all the rekated transactions and scripts are included in the folders.
+
+## Description
 
 Flow playground link:
 
@@ -8,20 +10,14 @@ Flow playground link:
 https://play.flow.com/1ad5f52e-9a69-4ed2-b819-4b2f1d60239f?type=contract&id=3618cc9c-2e4c-4b40-8ceb-6d73b926d3fd
 
 ```
-## Description
 
-### DYNAMO.cdc
+### FlowContract.cdc
 
-The "Dynamo" contract is a Fungible Token on the Flow blockchain. It extends the standard FungibleToken and introduces a custom Vault resource for user accounts. Admin functionalities include minting tokens, force withdrawing from users, and an "AdminSwap" operation. The contract emits events for token operations and initializes with an initial supply of tokens.
+The FlowContract.cdc contract contains the basic functionalitites like deposit, mint, transfer etc. It defines a resource Minter that contains a function mintTokens used for minting fungible tokens on the Flow blockchain. The function requires an amount of type UFix64 as a parameter and is restricted to be called only by the contract owner (the owner's address must match the FlowToken account address). Upon successful execution, it increases the total token supply, emits a TokensMinted event with the minted amount, and creates a new vault with the minted tokens, returning the vault to the caller.
 
-### swap.cdc
 
-This code is a Flow transaction that utilizes a swapping functionality from the "SwapperContract." It involves three main steps:
-It retrieves references to the SwapperContract, the user's $FLOW vault (flowVault), and the user's Dynamo vault (DYNAMOVault).
-In the execution phase, it calls the SwapperContract's Swap function, swapping a specified amount of $FLOW tokens for an equivalent amount of custom Dynamos.
-The Dynamos received from the swap are then deposited into the user's Dynamo vault.
+Setting the incoming vault's balance to 0.0 before destroying it in the deposit function is a common practice to ensure that any remaining balance in the vault is effectively cleared before the resource is destroyed.
 
-Admin can then draw Flow tokens and replace it with DYNAMO tokens at any time.
 
 ## Executing the program
 
