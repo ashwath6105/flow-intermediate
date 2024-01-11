@@ -1,7 +1,5 @@
 # Flow Intermediate Module 
 
-Token contract "DYNAMO". includes all the related transaction, scripts and contracts are included in the folders.
-
 ## Description
 
 Flow playground link: "https://play.flow.com/1ad5f52e-9a69-4ed2-b819-4b2f1d60239f?type=contract&id=3618cc9c-2e4c-4b40-8ceb-6d73b926d3fd"
